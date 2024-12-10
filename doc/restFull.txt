@@ -53,3 +53,71 @@ OK                  ERROR
                     500->ERROR DE SERVIDOR
                         timeout
                         reintentar
+
+
+1. Update pizzas
+path:/pizzas/{id}
+verbo:PUT
+request:
+    headers:
+        "content-type":"application/json"
+    body
+        {}-json
+respone:
+    headers:
+        "content-type":"application/json"
+    body:
+        {
+            id,price,....
+        }|EMPTY
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+OK                  ERROR
+202|204             404->NOT FOUND
+                    401->NO AUTENTICADO
+                    403|404->NO AUTORIZADO
+                    405->METODO NO PERMITIDO
+                    415->FORMATO NO SOPORTADO
+                    400->BAD REQUEST
+                    500->ERROR DE SERVIDOR
+                        timeout
+                        reintentar
+
+
+1. Remove pizzas
+path:/pizzas/{id}
+verbo:DELETE
+request:
+    
+respone:
+    
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+OK                  ERROR
+204                 404->NOT FOUND
+                    401->NO AUTENTICADO
+                    403|404->NO AUTORIZADO
+                    405->METODO NO PERMITIDO
+                    415->FORMATO NO SOPORTADO
+                    400->BAD REQUEST
+                    500->ERROR DE SERVIDOR
+                        timeout
+                        reintentar
+
+
+4. Get pizzas
+path:/pizzas/{id}
+verbo:GET
+request:
+    
+respone:
+   {....} 
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+OK                  ERROR
+200                 404->NOT FOUND
+                    401->NO AUTENTICADO
+                    403|404->NO AUTORIZADO
+                    405->METODO NO PERMITIDO
+                    415->FORMATO NO SOPORTADO
+                    400->BAD REQUEST
+                    500->ERROR DE SERVIDOR
+                        timeout
+                        reintentar

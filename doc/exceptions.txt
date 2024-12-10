@@ -1,0 +1,6 @@
+1. Crear custom exceptions
+2. Controlar el exceptions handler global
+3. Lanzar una exception para el metodo GET(404)
+    GET
+    UPDATE
+    REMOVE
