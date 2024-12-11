@@ -41,7 +41,7 @@ public interface IRemove<T, ID> : ICommit, IGet<T, ID> where T : EntityBase
 }
 
 public interface IQuery<T>:IDatabase<T> where T : EntityBase{
-    IEnumerable<T> Query => Data.AsTracking();
+    IEnumerable<T> Query => Data.AsNoTracking();
 }
 
 public interface IRepository<T, ID> : ICommit, IAdd<T>, IUpdate<T, ID>, IRemove<T, ID>, IQuery<T> where T : EntityBase
