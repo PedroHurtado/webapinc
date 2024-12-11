@@ -1,2 +1,47 @@
-**/bin
-**/obj
+# .NET Core
+
+## Ignorar archivos de compilación
+bin/
+obj/
+
+## Configuración del entorno de desarrollo
+.vs/
+*.user
+*.suo
+
+## Archivos de publicación
+*.publish/
+
+## Archivos generados por herramientas
+*.lock.json
+*.ide.json
+*.ide.csproj
+
+## Paquetes NuGet
+*.nupkg
+packages/
+
+## Logs y Debug
+*.log
+*.log*
+
+## Configuración local y secretos
+secrets.json
+appsettings.Development.json
+
+## Archivos temporales
+*.tmp
+*.temp
+
+## Sistema operativo
+.DS_Store
+Thumbs.db
+
+## IDEs
+.idea/
+.vscode/
+
+## Otros
+*~
+*.bak
+*.swp
