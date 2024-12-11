@@ -32,7 +32,7 @@ public interface IUpdate<T, ID> :  ICommit, IGet<T, ID> where T : EntityBase
         Data.Update(entity);
     }
 }
-public interface IRemove<T, ID> : ICommit, IGet<T, ID> where T : EntityBase
+public interface IRemove<T, ID> :  IGet<T, ID> where T : EntityBase
 {
     void Remove(T entity)
     {
