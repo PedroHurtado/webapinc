@@ -4,6 +4,7 @@ namespace webapi.domain.pizza;
 
 public class Ingredient : EntityBase
 {
+    
 
     public string Name { get; private set; }
     public decimal Cost { get; private set; }

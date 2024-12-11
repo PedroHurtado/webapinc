@@ -32,3 +32,7 @@ c:\Users\Home\Documents\Cursos 2024\12-Diciembre\.Net core\webapi\obj\Debug\net8
 C:\Users\Home\Documents\Cursos 2024\12-Diciembre\.Net core\webapi\obj\Debug\net8.0\webapi.genruntimeconfig.cache
 C:\Users\Home\Documents\Cursos 2024\12-Diciembre\.Net core\webapi\obj\Debug\net8.0\ref\webapi.dll
 c:\Users\Home\Documents\Cursos 2024\12-Diciembre\.Net core\webapi\obj\Debug\net8.0\webapi.sourcelink.json
+C:\Users\Home\Documents\Cursos 2024\12-Diciembre\.Net core\webapi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Home\Documents\Cursos 2024\12-Diciembre\.Net core\webapi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Home\Documents\Cursos 2024\12-Diciembre\.Net core\webapi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
+c:\Users\Home\Documents\Cursos 2024\12-Diciembre\.Net core\webapi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll

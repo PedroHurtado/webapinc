@@ -1,0 +1,65 @@
+Detached: La entidad no está siendo rastreada por el contexto.
+Unchanged: La entidad no tiene cambios pendientes.
+Modified: La entidad tiene cambios que serán actualizados en la base de datos.
+Added: La entidad será insertada en la base de datos.
+Deleted: La entidad será eliminada de la base de datos.
+
+ORM->Object Relation Model
+
+https://en.wikipedia.org/wiki/Object%E2%80%93relational_impedance_mismatch
+
+//Dominio
+Pizza:{
+    ingredients:[{}]
+}
+
+Pizza                           Ingredient
+1                               1,2
+            Pizza_Ingredient
+                1   1
+                1   2
+
+Mapping
+    String->2^32->50 caracteres NOT NULL
+    Todos los string permiten nulos
+
+Patrones diseño
+    1. Repository pattern
+    2. UOW(Unit of work)
+
+    insert,update,delete
+
+    , insert pizza,insert piza_ingredients,inser pizza_ingredients(3)
+
+    Que pasa si falla una->Se tienen que desacer todas
+
+    try{
+        open database
+        begin
+        operacions insert,update,delete
+        commit
+    }
+    catch(exception){
+        rollback
+    }
+    finally{
+        close database
+    }   
+
+1. Repository patter agrega al traking
+    
+    Add->Entity->status->Added->Insert
+
+    Get->Entity->status->Unchanged->
+        Update->status->Modified->Update
+        Remove->status->Deleted->Delete
+
+Relaciones
+    Tabla principal->Tabla Secundario
+
+    Navigation property->Rendimiento
+
+    Tabla Secundaria->Primaria
+
+    Factura->HasMany->Detalle(OK)
+    Detalle->HasOne->Product(OK)

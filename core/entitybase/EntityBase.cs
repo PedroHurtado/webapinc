@@ -1,7 +1,7 @@
 namespace webapi.core.entitybase
 {
-    public abstract class EntityBase
-    {
+    public abstract class EntityBase    
+    {    
         public Guid Id { get; init; }
 
         public EntityBase(Guid id) => Id = id;
