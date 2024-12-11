@@ -1,0 +1,11 @@
+1. Controlador->Servicio
+    OK,NOCONTENT,ETC,ETC,
+    Service.handler()
+2. Servicio
+    Validar si el request es correcto
+    Mapear->Request->Entidad    
+    Acceder al repositorio
+    Mapear de la entidad al response
+
+
+Controlador->Servicio->Repositorio

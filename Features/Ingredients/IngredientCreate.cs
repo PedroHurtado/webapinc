@@ -17,6 +17,7 @@ namespace webapi.Features.Ingredients
     }
     public class IngredientCreate : IFeatureModule
     {
+
         public void AddRoutes(IEndpointRouteBuilder app)
         {
             app.MapPost("/ingredients", (
@@ -24,10 +25,17 @@ namespace webapi.Features.Ingredients
                 [FromBody] IngredientRequest request
             ) =>
             {
+                //servicio->Antes de mapeal request a la entidad
+                //validar el request
                 var ingredient = Ingredient.Create(request.Name, request.Cost);
+                
+                //servicio
                 repository.Add(ingredient);
                 repository.Commit();
+
+;               //servicio
                 var response = new IngredientResponse(ingredient.Id, ingredient.Name, ingredient.Cost);
+                //controlador
                 return Results.Created("", response);
             });
         }
