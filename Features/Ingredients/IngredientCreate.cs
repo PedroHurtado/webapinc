@@ -1,3 +1,4 @@
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using webapi.core.IFeaturModule;
 using webapi.core.ioc;
@@ -23,10 +24,11 @@ namespace webapi.Features.Ingredients
         {
             app.MapPost("/ingredients", (
                 IService service,
+                IValidator<Request> validator,
                 [FromBody] Request request
             ) =>
             {
-
+                validator.ValidateAndThrow(request);
                 return Results.Created("",
                     service.Handler(request)
                 );
@@ -55,6 +57,9 @@ namespace webapi.Features.Ingredients
         {
             Response Handler(Request request);
         }
+        [Injectable]
+        private class Validator: AbstractValidator<Request> {
 
+        }
     }
 }
