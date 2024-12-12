@@ -1,0 +1,28 @@
+fetch/xhr
+
+El explorador la marca como no segura si los
+origenes son distintos
+
+    http://localhost:8080
+    http://localhost:8081
+
+error->json->js
+
+Origin->http://localhost:8080
+
+access-control-allow-origin:*|http://localhost:8080
+lista->urls permitidas->url->cookie
+*->no puedo por cookie
+
+Access-Control-Max-Age: 3600
+
+OPTIONS
+GET,POST,PUT,DELETE
+
+https://developer.mozilla.org/en-US/docs/Glossary/Preflight_request
+
+https://www.w3.org/TR/2020/SPSD-cors-20200602/
+
+
+
+

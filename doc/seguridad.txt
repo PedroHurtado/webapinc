@@ -1,0 +1,36 @@
+1. /login
+    user:pwd
+    oauth
+2. Server
+    Autenticar el usu:pwd contra una bb.dd o contra un ISP
+
+    1. Devuelvas una cookie
+            HttpOnly->
+            Secure->https
+    2. Devuelvas un token JWT
+            1. Donde lo estais guardando en la web
+
+                localStorage->NOOOOOOOO
+                sessionStorage(x)
+
+                1. LocalStorage requiere serializacion y deserializacion
+                2. Todos los accesos al localStorage son sincronos
+                    setItem
+                    getItem
+                3. No puede trabajar con worker
+
+            IndexDb
+                1. No serializa ni deserializa
+                2. Todos los accesos son asincronos
+                3. Puede trabajar en el hilo principal y en los worker
+
+    Como securizo mi token para que no sea accesible por un 
+    codigo malicioso(XSS)
+
+    https://www.w3.org/TR/CSP3/
+
+    const parts = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c".split('.')
+    atob(parts[0])
+    atob(parts[1])
+
+
