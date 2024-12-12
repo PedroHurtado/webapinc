@@ -30,7 +30,7 @@ namespace webapi.Features.Ingredients
                 return Results.Created("",
                     service.Handler(request)
                 );
-            }).RequireAuthorization();
+            });
         }
 
         [Injectable]

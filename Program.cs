@@ -1,5 +1,6 @@
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using webapi.core.IFeaturModule;
@@ -52,7 +53,14 @@ builder.Services.AddAuthentication(options =>
         }
 
     });
-builder.Services.AddAuthorization();
+
+
+builder.Services.AddAuthorization(options =>
+{    
+    options.FallbackPolicy = new AuthorizationPolicyBuilder()
+        .RequireAuthenticatedUser()
+        .Build();
+});
 
 var app = builder.Build();
 
